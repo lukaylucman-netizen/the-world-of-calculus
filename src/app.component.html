@@ -1,0 +1,32 @@
+<div class="min-h-screen relative overflow-x-hidden selection:bg-[#ccff00] selection:text-black">
+  <!-- Background Elements (Z-Index 0) -->
+  <!-- Removed opacity-30 so the CSS-defined grid opacity (0.15) is fully visible -->
+  <div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
+  
+  <!-- Brighter Gradient: from #0a2e15 to #1a4d2b -->
+  <div class="fixed top-0 left-0 w-full h-[600px] bg-gradient-to-b from-[#1a4d2b] to-transparent opacity-40 pointer-events-none z-0"></div>
+  
+  <!-- Fireflies (Kunang-kunang) (Z-Index 5 - Behind Content) -->
+  
+  <!-- Sisi Kiri 1 -->
+  <div class="firefly w-1 h-1 left-[2%]" style="animation-duration: 25s; animation-delay: 0s;"></div>
+  
+  <!-- Sisi Kiri 2 -->
+  <div class="firefly w-1.5 h-1.5 left-[16%]" style="animation-duration: 32s; animation-delay: 15s;"></div>
+
+  <!-- Sisi Kanan 1 -->
+  <div class="firefly w-1.5 h-1.5 left-[84%]" style="animation-duration: 28s; animation-delay: 8s;"></div>
+
+  <!-- Sisi Kanan 2 -->
+  <div class="firefly w-1 h-1 left-[97%]" style="animation-duration: 35s; animation-delay: 22s;"></div>
+
+  <!-- Main Content (Z-Index 50 & 10) -->
+  <app-navbar class="relative z-50" />
+  
+  <main class="relative z-40 flex flex-col gap-0 min-h-screen">
+    <!-- Router Outlet handles switching between Home and Modules -->
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-footer />
+</div>
